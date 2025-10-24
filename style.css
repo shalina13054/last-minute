@@ -1,0 +1,527 @@
+/* --- Google Fonts & Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-blue: #007BFF;
+    --secondary-orange: #FF8C00;
+    --accent-yellow: #FFD700;
+    --dark-text: #333;
+    --light-bg: #f7f9fc;
+    --card-bg: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --gradient-header: linear-gradient(90deg, #007bff, #46b8da);
+    --gradient-button: linear-gradient(45deg, var(--secondary-orange), var(--accent-yellow));
+    --transition-speed: 0.3s;
+}
+
+/* --- Base & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--secondary-orange);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--gradient-header);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed);
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.cta-button {
+    background: var(--gradient-button);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: var(--dark-text) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #ffa033, #ffeb6b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Hero Section (index.html) --- */
+.hero {
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    min-height: 60vh;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    background: var(--gradient-button);
+    color: var(--dark-text);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    transition: all var(--transition-speed);
+}
+
+.shop-now-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+}
+
+.hero-image-container {
+    width: 40%;
+    position: relative;
+    padding: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    background: url('https://via.placeholder.com/600x300/46b8da/ffffff?text=Stylish+StepStyle+Shoe') no-repeat center center/cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.02);
+    }
+}
+
+/* --- Featured Shoes Section --- */
+.featured-shoes {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.featured-shoes h2 {
+    font-size: 2.5em;
+    color: var(--secondary-orange);
+    margin-bottom: 40px;
+}
+
+.shoe-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.shoe-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.shoe-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.shoe-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-1 { background-image: url('https://via.placeholder.com/300x200/FF8C00/ffffff?text=The+Explorer'); }
+.img-2 { background-image: url('https://via.placeholder.com/300x200/007BFF/ffffff?text=The+Velocity'); }
+.img-3 { background-image: url('https://via.placeholder.com/300x200/FFD700/333333?text=Chic+Comfort'); }
+
+.shoe-card h3 {
+    color: var(--dark-text);
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-btn, .buy-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    text-align: center;
+}
+
+.cart-btn {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.buy-btn {
+    background: var(--gradient-button);
+    color: var(--dark-text);
+}
+
+.cart-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.buy-btn:hover {
+    background: linear-gradient(45deg, #ffa033, #ffeb6b);
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-text);
+    color: white;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-links a {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+.contact-links a:hover {
+    color: var(--accent-yellow);
+}
+
+/* ================================== */
+/* --- Form Page Styling (form.html) --- */
+/* ================================== */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5%;
+    min-height: 80vh;
+}
+
+.order-form-container {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+}
+
+.order-form-container h2 {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--secondary-orange);
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    cursor: pointer;
+    background-color: var(--light-bg);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    transition: all var(--transition-speed);
+    font-weight: 400;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.4);
+}
+
+.submit-order-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: var(--gradient-button);
+    color: var(--dark-text);
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.submit-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.6);
+}
+
+/* Validation Feedback (used by script.js) */
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown),
+select:invalid:not(:focus):not([value=""]) {
+    border: 2px solid red !important;
+}
+
+/* ================================== */
+/* --- Thank You Page Styling (thankyou.html) --- */
+/* ================================== */
+.thankyou-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #46b8da 100%);
+    overflow: hidden; /* For confetti */
+}
+
+.thankyou-main {
+    text-align: center;
+    z-index: 10;
+}
+
+.thankyou-card {
+    background-color: var(--card-bg);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    animation: bounceIn 0.8s forwards;
+    max-width: 500px;
+    width: 90%;
+}
+
+@keyframes bounceIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.checkmark-icon {
+    color: var(--secondary-orange);
+    font-size: 5em;
+    margin-bottom: 20px;
+    animation: rotateScale 1.5s ease-out;
+}
+
+@keyframes rotateScale {
+    0% { transform: scale(0) rotate(0deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+.thankyou-card h1 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.thankyou-card p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.back-to-home-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--gradient-button);
+    color: var(--dark-text);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Confetti Styling (used by script.js) --- */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    border-radius: 50%;
+    transform-origin: 100% 100%;
+    pointer-events: none;
+    z-index: 9;
+}
+
+/* --- Responsive Design (Mobile-Friendly) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        margin: 5px 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-image-container {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-links {
+        margin-top: 15px;
+    }
+
+    .shoe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .order-form-container {
+        padding: 25px;
+    }
+}
