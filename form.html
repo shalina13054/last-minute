@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Order - StepStyle Shoes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">StepStyle Shoes</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#featured">Shop</a>
+            <a href="form.html" class="cta-button">Order Now</a>
+        </nav>
+    </header>
+
+    <main class="form-page">
+        <section class="order-form-container">
+            <h2><i class="fas fa-receipt"></i> Complete Your Order Details</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address:</label>
+                    <textarea id="address" name="address" rows="3" required placeholder="123 Street, City, ZIP"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="size">Shoe Size (US Men's):</label>
+                    <select id="size" name="size" required>
+                        <option value="">Select Size</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="card" name="payment" value="Card" required>
+                        <label for="card"><i class="fas fa-credit-card"></i> Credit Card</label>
+                        <input type="radio" id="paypal" name="payment" value="PayPal">
+                        <label for="paypal"><i class="fab fa-paypal"></i> PayPal</label>
+                        <input type="radio" id="cod" name="payment" value="COD">
+                        <label for="cod"><i class="fas fa-money-bill-wave"></i> COD</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-order-btn">Submit Order <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 StepStyle Shoes. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
